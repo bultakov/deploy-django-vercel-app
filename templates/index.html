@@ -11,7 +11,12 @@
 
 
     const ws = new WebSocket(
-        `wss://${window.location.host}/ws/news/`
+        `wss://${window.location.host}/ws/news/`,
+        {
+            protocolVersion: 8,
+            origin: `https://${window.location.host}`,
+            rejectUnauthorized: false
+        }
     )
 
 
