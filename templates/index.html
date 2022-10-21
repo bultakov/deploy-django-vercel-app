@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Django Channel</title>
+</head>
+<body>
+<pre id="response"></pre>
+<script>
+    const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY2OTUyOTE4LCJpYXQiOjE2NjYzNDgxMTgsImp0aSI6ImVlOWYyZjQ5NjcyZjRkODg5NDcyNDJiNzBlMTk4NjZiIiwidXNlcl9pZCI6MX0.MIz4aNGG1gbkmOSqy1vDW-LTE42K4ST8KelIxeqMSQw";
+
+
+    const ws = new WebSocket(
+        `ws://${window.location.host}/ws/news/`
+    )
+
+
+    ws.onopen = function (e) {
+        ws.send(JSON.stringify({
+            action: "list",
+            request_id: new Date().getTime()
+        }))
+    };
+
+    ws.onmessage = function (e) {
+        const data = JSON.parse(e.data);
+        document.getElementById("response").textContent = JSON.stringify(data, undefined, 2);
+        console.log('RealTime', data.data)
+    };
+
+</script>
+</body>
+</html>

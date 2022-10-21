@@ -1,2 +1,7 @@
 Django
 gunicorn
+djangorestframework
+djangochannelsrestframework
+djangorestframework-simplejwt[crypto]
+channels-redis
+channels["daphne"]
