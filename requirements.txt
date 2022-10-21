@@ -4,4 +4,4 @@ djangorestframework
 djangochannelsrestframework
 djangorestframework-simplejwt[crypto]
 channels-redis
-channels['daphne']
+channels[daphne]
