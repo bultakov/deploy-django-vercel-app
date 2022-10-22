@@ -5,3 +5,4 @@ djangochannelsrestframework
 djangorestframework-simplejwt[crypto]
 channels-redis
 channels[daphne]
+psycopg2-binary
