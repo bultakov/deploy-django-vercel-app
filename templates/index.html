@@ -7,8 +7,11 @@
 <body>
 <pre id="response"></pre>
 <script>
+
+    const ws_scheme = window.location.protocol === "https:" ? "wss" : "ws";
+
     const ws = new WebSocket(
-        `wss://${window.location.host}/ws/news/`
+        ws_scheme + `://${window.location.host}/ws/news/`
     )
 
 
