@@ -129,13 +129,6 @@ SIMPLE_JWT = {
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        "ENGINE": "django.db.backends.postgresql_psycopg2",
-        "HOST": "ec2-63-32-248-14.eu-west-1.compute.amazonaws.com",
-        "USER": "ynxyxydeflvljn",
-        "NAME": "d2bsmio00q4apc",
-        "PASSWORD": "ce0594f957e547d09e76fdb4117b81dd23fa4278f9ed4129942dca39f20dc7bb",
-    }
 }
 
 # Password validation
